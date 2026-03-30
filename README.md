@@ -1,16 +1,100 @@
-# React + Vite
+ # 📚 CourseCard — Course Selling Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive course selling web application built with React, Redux Toolkit, and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Live Preview
 
-## React Compiler
+> Run locally with `npm run dev` — opens at `http://localhost:5173`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+ 
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology | Version | Purpose |
+|---|---|---|
+| React | 19.x | UI Library |
+| Vite | 7.x | Build Tool & Dev Server |
+| Tailwind CSS | 4.x | Styling |
+| Redux Toolkit | 2.x | Global State Management |
+| React Redux | 9.x | Redux bindings for React |
+| React Router DOM | 7.x | Client-side Routing |
+
+---
+
+
+
+## 🚀 Getting Started
+
+### 1. Clone or Download
+
+Download the zip and extract it, or clone the repo:
+
+```bash
+git clone <your-repo-url>
+cd course-selling
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+
+### 5. Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+ 
+
+## 🧩 State Management
+
+Redux Toolkit is used for global state. The `geeksSlice` manages:
+
+- `courses` — All 25 courses loaded from `data.json`
+- `cartCourses` — Courses added to cart
+- `wishlistCourse` — Courses saved to wishlist
+
+---
+
+## 📝 Custom Hooks
+
+| Hook | Purpose |
+|---|---|
+| `useFetchCourseData()` | Loads courses from local data into Redux store |
+| `useIsCourseExistInCart(id)` | Checks if a course is in the cart |
+| `useIsCourseExistInWishlist(id)` | Checks if a course is in the wishlist |
+
+---
+
+
+## 👤 Author
+
+**Girdhari Patel**
+
+> Built with ❤️ using React + Vite + Tailwind CSS + Redux Toolkit
+
+---
+
+## 📄 License
+
+This project is open source and available for personal and educational use.
